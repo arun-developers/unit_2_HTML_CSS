@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            grid-template-areas:
+                "a a a a  "
+                "b c d e ";
+            gap: 20px;
+
+        }
+
+        #container>div {
+            background-color: rgb(202, 78, 99);
+
+        }
+
+        #container>div:nth-child(1) {
+            grid-area: a;
+            background-color: yellow;
+        }
+
+        #container>div:nth-child(2) {
+            grid-area: b;
+            height: 250px;
+            background-color: rgb(179, 41, 41);
+        }
+
+        #container>div:nth-child(3) {
+            grid-area: c;
+            height: 250px;
+            background-color: rgb(51, 190, 51);
+        }
+
+        #container>div:nth-child(4) {
+            grid-area: d;
+            height: 250px;
+            background-color: rgb(86, 86, 182);
+        }
+
+        #container>div:nth-child(5) {
+            grid-area: e;
+            height: 250px;
+            background-color: rgb(174, 141, 204);
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        h1 {
+            margin-left: 20px;
+            font-size: 50px;
+            margin-top: 17px;
+        }
+
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+            #container {
+                flex-direction: column;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 200px);
+                grid-template-areas:
+                    "a a "
+                    "b c "
+                    "d e";
+                }
+
+            #container>div {
+                justify-content: space-between;
+            }
+        }
+
+        @media only screen and (min-width: 70px) and (max-width: 420px) {
+            #container {
+                flex-direction: column;
+                grid-template-areas:
+                    "a "
+                    "b "
+                    "c "
+                    "d"
+                    "e";
+                gap: 20px;
+            }
+
+            #container>div {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(5, 100px);
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <h1>Navigation</h1>
+        </div>
+        <div>
+            <p>Box 1</p>
+        </div>
+        <div>
+            <p>Box 2</p>
+        </div>
+        <div>
+            <p>Box 3</p>
+        </div>
+        <div>
+            <p>Box 4</p>
+        </div>
+    </div>
+</body>
+
+</html>

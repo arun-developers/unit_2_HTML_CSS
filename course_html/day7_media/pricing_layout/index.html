@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            width: 80%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 350px);
+            gap: 20px;
+            margin: auto;
+        }
+
+        #container>div {
+            /* border: 1px solid green; */
+            margin-top: 30px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            height: 400px;
+            box-sizing: border-box;
+
+        }
+
+        h1,
+        p,
+        h2 {
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 30px;
+        }
+
+        button {
+            height: 50px;
+            width: 60%;
+            border: 1px solid green;
+            border-radius: 5px;
+            font-weight: bold;
+            color: red;
+            
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 60px;
+        }
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+
+            #container{
+                flex-direction: column;
+            }
+            #container>div{
+                grid-template-rows: auto;
+            }
+            h1,p,h2{
+                text-align: center;
+                
+            }
+           
+
+        }
+        @media only screen and (min-width: 70px) and (max-width: 420px){
+             #container > div{
+                flex-direction: column;
+            }
+            #container{
+                grid-template-rows: auto;
+                grid-template-columns: repeat(1,1fr);
+            }
+            h1,p,h2{
+                text-align: center;
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <h1>Choose a plan that rigth for your business</h1>
+        <p>We collect reviews from our users so you can get an honest opinion
+            of what an experince with our website really like</p>
+        <div id="container">
+            <div>
+                <h2>Starter Plan</h2>
+                <h1 style="color: green;">Free</h1>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get an honest opinion
+                    of what an experince with our website really like</p>
+                <div class="button">
+                    <button>Start now</button>
+                </div>
+            </div>
+            <div>
+                <h2>Business Plan</h2>
+                <h1 style="color: orange;">$39.00</h1>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get an honest opinion
+                    of what an experince with our website really like</p>
+                <div class="button">
+                    <button style="background-color: lightblue;">Start now</button>
+                </div>
+            </div>
+            <div>
+                <h2>Premium Plan</h2>
+                <h1 style="color: skyblue;">$59.00</h1>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get an honest opinion
+                    of what an experince with our website really like</p>
+                <div class="button">
+                    <button>Start now</button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

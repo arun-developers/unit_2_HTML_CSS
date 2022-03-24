@@ -1,0 +1,14 @@
+#container{
+    display: flex;
+    width: 85%;
+    height: 500px;
+    margin: auto;
+}
+.boxes{
+    height: 420px;
+    width: 23%;
+    margin: auto;
+}
+.strike{
+    display: flex;
+}
