@@ -50,32 +50,32 @@
 
 // }
 // ----------------------------------------------------------------------------------------------------
-function runProgram(input){
+// function runProgram(input){
 
 
-}
+// }
 
 
- if (process.env.USER === "") {
-  runProgram(``);
-} else {
-  process.stdin.resume();
-  process.stdin.setEncoding("ascii");
-  let read = "";
-  process.stdin.on("data", function (input) {
-    read += input;
-  });
-  process.stdin.on("end", function () {
-    read = read.replace(/\n$/, "");
-    read = read.replace(/\n$/, "");
-    runProgram(read);
-  });
-  process.on("SIGINT", function () {
-    read = read.replace(/\n$/, "");
-    runProgram(read);
-    process.exit(0);
-  });
-}
+//  if (process.env.USER === "") {
+//   runProgram(``);
+// } else {
+//   process.stdin.resume();
+//   process.stdin.setEncoding("ascii");
+//   let read = "";
+//   process.stdin.on("data", function (input) {
+//     read += input;
+//   });
+//   process.stdin.on("end", function () {
+//     read = read.replace(/\n$/, "");
+//     read = read.replace(/\n$/, "");
+//     runProgram(read);
+//   });
+//   process.on("SIGINT", function () {
+//     read = read.replace(/\n$/, "");
+//     runProgram(read);
+//     process.exit(0);
+//   });
+// }
 // ---------------------------------------------------------------------------------------------
 
 // var arr1 = [1, 2, 2, 3, 4, 5];
@@ -316,21 +316,56 @@ function runProgram(input){
 //     }
 
 // }
-// --------------------------------------------------------------------------------------------------
-function swaparray(array,left,right){
-    // write code here
-    // while (left<right) {
-        var temp = array[left];
-        array[left]= array[right];
-        array[right] = temp;
-        console.log(array);
-    // }
-    
-}
-var array = [1,2,3,4];
-var left = 0;
-var right = array.length;
-swaparray(array,left,right);
+// // --------------------------------------------------------------------------------------------------
+// function swaparray(array, left, right) {
+//   // write code here
+//   // while (left<right) {
+//   var temp = array[left];
+//   array[left] = array[right];
+//   array[right] = temp;
+//   console.log(array);
+//   // }
+
+// }
+// var array = [1, 2, 3, 4];
+// var left = 0;
+// var right = array.length;
+// swaparray(array, left, right);
+// // -----------------------------------------------------------------------------------------------------------
+// function twoArrayAndSum(n, m, matrix, s) {
+//   //write code here
+//   var slider = 0;
+//   var con_num = 3;
+//   var count = 0;
+//   while (slider < n) {  // count for row 
+//     var sum_row = 0;
+//     var sum_col = 0;
+//     for (var i = 0; i < con_num; i++) {
+//       sum_row += matrix[slider][i];
+//       sum_col += matrix[i][slider];
+//     }
+//     if (sum_row == s) {
+//       count++;
+//     }
+//     if (sum_col == s) {
+//       count++;
+//     }
+//     for (var i = con_num; i < n; i++) {
+//       sum_row += matrix[slider][i];
+//       sum_row -= matrix[slider][i - con_num];
+//       if (sum_row == s) {
+//         count++;
+//       }
+//       sum_col += matrix[i][slider];
+//       sum_col -= matrix[i - con_num][slider];
+//       if (sum_col == s) {
+//         count++;
+//       }
+//     }
+//     slider++;
+//   } console.log(count);
+// }
+// // -----------------------------------------------------------------------------------------------------------
 
 
 
